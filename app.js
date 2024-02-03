@@ -1,8 +1,6 @@
 let listaDeNumerosSorteados = [];
 let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
-console.log(numeroSecreto);
-
 let tentativas = 1;
 
 
@@ -41,9 +39,6 @@ function gerarNumeroAleatorio (){
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    console.log(chute == numeroSecreto);
-    console.log(numeroSecreto);
-    console.log(listaDeNumerosSorteados);
     if (chute == numeroSecreto) {
         exibirTextoNatela('h1', 'Acertou!');
         let numeroTentativas = tentativas > 1 ? 'tentativas' : 'tentativa';
@@ -66,6 +61,5 @@ function novoJogo(){
     tentativas = 1;
     exibirMensagemInicial();
     document.getElementById('reiniciar').removeAttribute('disabled', true);
-    console.log(listaDeNumerosSorteados);
 }
 novoJogo();
